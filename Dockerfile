@@ -15,10 +15,10 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /cdt
 RUN yarn
 RUN yarn download:plugins
-RUN yarn browser build
+# RUN yarn browser build
 
-FROM node:20
-COPY --from=build /cdt /cdt
-WORKDIR /cdt
-CMD ["yarn", "browser", "start", "--hostname=0.0.0.0"]
-EXPOSE 3000
+# FROM node:20
+# COPY --from=build /cdt /cdt
+# WORKDIR /cdt
+# CMD ["yarn", "browser", "start", "--hostname=0.0.0.0"]
+# EXPOSE 3000
