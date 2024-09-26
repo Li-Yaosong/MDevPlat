@@ -28,7 +28,7 @@ RUN pnpm recursive run build
 
 WORKDIR /site
 RUN npm install
-RUN npm build
+RUN npm run build
 
 # FROM node:20
 # COPY --from=build /cdt /cdt
