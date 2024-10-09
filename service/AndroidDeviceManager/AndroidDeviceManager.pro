@@ -1,0 +1,31 @@
+QT = core network
+
+CONFIG += c++17 cmdline
+CONFIG -= app_bundle
+QMAKE_LFLAGS += -no-pie
+# You can make your code fail to compile if it uses deprecated APIs.
+# In order to do so, uncomment the following line.
+#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
+
+SOURCES += \
+        clientworker.cpp \
+        main.cpp \
+        server.cpp \
+        synchronousprocess.cpp \
+        tcpdatareceiver.cpp
+
+# Default rules for deployment.
+qnx: target.path = /tmp/$${TARGET}/bin
+else: unix:!android: target.path = /opt/$${TARGET}/bin
+!isEmpty(target.path): INSTALLS += target
+
+include(adb/adb.pri)
+
+HEADERS += \
+    clientworker.h \
+    server.h \
+    synchronousprocess.h \
+    tcpdatareceiver.h
+
+win32:DESTDIR = D:/ISS/projects
+unix:DESTDIR = $(HOME)

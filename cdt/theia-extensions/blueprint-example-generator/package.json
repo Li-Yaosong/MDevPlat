@@ -1,0 +1,49 @@
+{
+  "name": "@eclipse-cdt-cloud/blueprint-example-generator",
+  "version": "1.49.101",
+  "description": "Extension for generating examples in CDT Cloud Blueprint",
+  "dependencies": {
+    "@theia/core": "1.49.1",
+    "@theia/debug": "1.49.1",
+    "@theia/task": "1.49.1",
+    "fs-extra": "^8.1.0",
+    "inversify": "^6.0.1"
+  },
+  "devDependencies": {
+    "rimraf": "^2.7.1",
+    "tslint": "^5.12.0",
+    "typescript": "^4.5.5"
+  },
+  "theiaExtensions": [
+    {
+      "frontendElectron": "lib/browser/example-generator-frontend-module",
+      "frontend": "lib/browser/example-generator-frontend-module",
+      "backend": "lib/node/example-generator-backend-module"
+    }
+  ],
+  "keywords": [
+    "theia-extension"
+  ],
+  "license": "EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eclipse-cdt-cloud/cdt-cloud-blueprint.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eclipse-cdt-cloud/cdt-cloud-blueprint/issues"
+  },
+  "homepage": "https://www.eclipse.org/cdt-cloud/",
+  "files": [
+    "resources",
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "prepare": "yarn clean && yarn build",
+    "clean": "rimraf lib *.tsbuildinfo",
+    "build": "tsc -b",
+    "lint": "eslint --ext js,jsx,ts,tsx src",
+    "lint:fix": "eslint --ext js,jsx,ts,tsx src --fix",
+    "update:next": "ts-node ../../scripts/update-theia-version.ts"
+  }
+}

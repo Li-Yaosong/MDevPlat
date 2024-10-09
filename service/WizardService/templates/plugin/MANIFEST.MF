@@ -1,0 +1,22 @@
+﻿#注意：该文件不允许最终用户修改！
+#symbolic   -插件名称     version   -插件版本     compatVersion-兼容版本
+#activation -激活方式(lazy-懒加载,eager-立即加载)
+#type       -插件类型(dll-动态链接库，exe-可执行程序)
+#unload     -停止与卸载(allow-允许停止与卸载，forbid-禁止停止与卸载)
+#vendor     -作者         copyright -版权         license     -许可
+#description-插件描述     category  -类别         website     -作者主页
+#dependency -插件依赖列表 (pluginname1, 1.0.0;pluginname2, 1.0.0;)
+
+symbolic: %SYMBOLIC%
+version: %VERSION%
+compatVersion: %COMPATVERSION%
+activation: %ACTIVATION%
+type: %TYPE%
+unload: %UNLOAD%
+vendor: %VENDOR%
+copyright: %COPYRIGHT%
+license: %LICENSE%
+description: %DESCRIPTION%
+category: %CATEGORY%
+website: %WEBSITE%
+dependency: %DEPENDENCY%

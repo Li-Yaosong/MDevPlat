@@ -1,0 +1,13 @@
+{
+    "workspaceName": "CDT Cloud Clangd Contexts Example",
+    "projects": [
+        {
+            "path": "app",
+            "contextDirs": "flat"
+        },
+        {
+            "path": "lib",
+            "contextDirs": "flat"
+        }
+    ]
+}

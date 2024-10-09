@@ -1,0 +1,25 @@
+{
+    "extends": "../../configs/base.tsconfig",
+    "include": [],
+    "compilerOptions": {
+      "composite": true
+    },
+    "references": [
+      {
+        "path": "../../theia-extensions/theia-blueprint-product"
+      },
+      {
+        "path": "../../node_modules/handheldterminal"
+      },
+      {
+        "path": "../../node_modules/device-manager"
+      },
+      {
+        "path": "../../node_modules/getting-started"
+      },
+      {
+        "path": "../../node_modules/microwizard"
+      }
+    ]
+  }
+  
